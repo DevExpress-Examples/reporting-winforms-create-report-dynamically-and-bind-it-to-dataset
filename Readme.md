@@ -1,27 +1,31 @@
-<!-- default badges list -->
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E4657)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
+# Reporting for WinForms - Create a Report Dynamically and Bind It to a DataSet
+
+This example demonstrates how to create a report dynamically and bind it to a [DataSet](https://docs.devexpress.com/XtraReports/400542). Based on a user's choice, either the [XRTable](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRTable) or [XRLabel](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRLabel) control is used to display report data, and the [XRChart](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRChart) control is used to visualize this data.
+
+![Report Preview](Images/generate-report-dynamically.png)
+
+If you want to create a report based on [GridControl](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.GridControl) data, use the [ReportGenerator](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.ReportGeneration.ReportGenerator) class as described in the following help topic: [Advanced Grid Printing and Exporting](https://docs.devexpress.com/WindowsForms/114962/controls-and-libraries/data-grid/export-and-printing/advanced-grid-printing-and-exporting).
+
 <!-- default file list -->
-*Files to look at*:
 
-* [Form1.cs](./CS/Report_at_Runtime/Form1.cs) (VB: [Form1.vb](./VB/Report_at_Runtime/Form1.vb))
-* [Program.cs](./CS/Report_at_Runtime/Program.cs) (VB: [Program.vb](./VB/Report_at_Runtime/Program.vb))
+## Files to Look At
+
+- [Form1.cs](./CS/Form1.cs) ([Form1.vb](./VB/Form1.vb))
+
 <!-- default file list end -->
-# How to dynamically generate a report and bind it to a DataSet in a WinForms application
+
+## Documentation
+
+- [Reporting - Create Reports in Code](https://docs.devexpress.com/XtraReports/115726)
+- [Reporting - Bind a Report to a DataSet](https://docs.devexpress.com/XtraReports/400542)
+- [WinForms Controls - Advanced Grid Printing and Exporting](https://docs.devexpress.com/WindowsForms/114962)
+
+## More Examples
+
+- [How to dynamically generate a master-detail report in a WinForms application](https://github.com/DevExpress-Examples/Reporting_how-to-dynamically-generate-a-master-detail-report-in-a-winforms-application-e4421)
+- [How to dynamically generate a report and bind it to a collection of objects in a WinForms application](https://github.com/DevExpress-Examples/Reporting_how-to-dynamically-generate-a-report-and-bind-it-to-a-collection-of-objects-e652)
+- [How to create a report dynamically](https://supportcenter.devexpress.com/ticket/details/ak15900/how-to-create-a-report-dynamically)
 
 
-<p>If you wish to generate a report based on <a href="https://documentation.devexpress.com/WindowsForms/DevExpress.XtraGrid.GridControl.class">GridControl</a>, it is easy to do this by using <a href="https://documentation.devexpress.com/XtraReports/DevExpress.XtraReports.ReportGeneration.ReportGenerator.class">ReportGenerator</a> as described in the <a href="https://documentation.devexpress.com/WindowsForms/114962/Controls-and-Libraries/Data-Grid/Export-and-Printing/Advanced-Grid-Printing-and-Exporting">Advanced Grid Printing and Exporting</a> help article. This component can be used at design time as well as at runtime. <br><br>If you are interested in creating a report from scratch, use the approach described below.<br><br>1. Create a report instance and <a href="https://documentation.devexpress.com/#XtraReports/CustomDocument15034">bind it to data</a>.</p>
-<p>2. Add required <a href="https://documentation.devexpress.com/#XtraReports/CustomDocument2590">bands</a> to the report.</p>
-<p>3. Add required <a href="https://documentation.devexpress.com/#XtraReports/CustomDocument2605">controls</a> to the created bands and provide data to them.</p>
-<p>After the report layout is complete, you can generate the report document and display it in a <a href="https://documentation.devexpress.com/#XtraReports/CustomDocument10707">Print Preview</a>.</p>
-<p> </p>
-<p><strong>See also</strong>
-
-* <a href="https://www.devexpress.com/Support/Center/p/E4421">How to dynamically generate a master-detail report in a WinForms application</a>
-* <a href="https://www.devexpress.com/Support/Center/p/E652">How to dynamically generate a report and bind it to a collection of objects in a WinForms application</a>
-* <a href="https://www.devexpress.com/Support/Center/p/AK15900">How to create a report dynamically</a></p>
-
-<br/>
 
 
