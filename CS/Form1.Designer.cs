@@ -68,7 +68,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(175, 45);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Choose a control which should be used to display the report\'s data.";
+            this.textBox1.Text = "Choose a control that should be used to display report data.";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
