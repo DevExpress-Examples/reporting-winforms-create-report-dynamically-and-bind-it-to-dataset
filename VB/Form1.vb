@@ -90,14 +90,14 @@ Namespace WindowsFormsApp1
 		Public Sub InitializeBandsUsingXRLabel(ByVal report As XtraReport)
 			Dim ds = TryCast(report.DataSource, DataSet)
 			Dim colCount As Integer = ds.Tables(0).Columns.Count
-			Dim colWidth As Integer = (report.PageWidth - (report.Margins.Left + report.Margins.Right)) / colCount
+			Dim colWidth As Single = (report.PageWidth - (report.Margins.Left + report.Margins.Right)) / colCount
 
 			' Create header captions.
 			For i As Integer = 0 To colCount - 1
 				Dim label = New XRLabel()
 
-				label.Location = New Point(colWidth * i, 0)
-				label.Size = New Size(colWidth, 20)
+				label.LocationF = New PointF(colWidth * i, 0)
+				label.SizeF = New SizeF(colWidth, 20)
 				label.Text = ds.Tables(0).Columns(i).Caption
 
 				If i > 0 Then
@@ -114,8 +114,8 @@ Namespace WindowsFormsApp1
 			For i As Integer = 0 To colCount - 1
 				Dim label = New XRLabel()
 
-				label.Location = New Point(colWidth * i, 0)
-				label.Size = New Size(colWidth, 20)
+				label.LocationF = New PointF(colWidth * i, 0)
+				label.SizeF = New SizeF(colWidth, 20)
 				label.ExpressionBindings.Add(New ExpressionBinding("Text", "[" & ds.Tables(0).Columns(i).Caption & "]"))
 				label.OddStyleName = "OddStyle"
 				label.EvenStyleName = "EvenStyle"
@@ -134,15 +134,15 @@ Namespace WindowsFormsApp1
 		Public Sub InitializeBandsUsingXRTable(ByVal report As XtraReport)
 			Dim ds = (TryCast(report.DataSource, DataSet))
 			Dim colCount As Integer = ds.Tables(0).Columns.Count
-			Dim colWidth As Integer = (report.PageWidth - (report.Margins.Left + report.Margins.Right)) / colCount
+			Dim colWidth As Single = (report.PageWidth - (report.Margins.Left + report.Margins.Right)) / colCount
 
 			' Create a table header.
 			Dim tableHeader = New XRTable()
 			tableHeader.Height = 20
-			tableHeader.Width = (report.PageWidth - (report.Margins.Left + report.Margins.Right))
+			tableHeader.WidthF = (report.PageWidth - (report.Margins.Left + report.Margins.Right))
 
 			Dim headerRow = New XRTableRow()
-			headerRow.Width = tableHeader.Width
+			headerRow.WidthF = tableHeader.WidthF
 			tableHeader.Rows.Add(headerRow)
 
 			tableHeader.BeginInit()
@@ -150,10 +150,10 @@ Namespace WindowsFormsApp1
 			' Create a table body.
 			Dim tableBody = New XRTable()
 			tableBody.Height = 20
-			tableBody.Width = (report.PageWidth - (report.Margins.Left + report.Margins.Right))
+			tableBody.WidthF = (report.PageWidth - (report.Margins.Left + report.Margins.Right))
 
 			Dim bodyRow = New XRTableRow()
-			bodyRow.Width = tableBody.Width
+			bodyRow.WidthF = tableBody.WidthF
 			tableBody.Rows.Add(bodyRow)
 			tableBody.EvenStyleName = "EvenStyle"
 			tableBody.OddStyleName = "OddStyle"
@@ -163,11 +163,11 @@ Namespace WindowsFormsApp1
 			' Initialize table header and body cells.
 			For i As Integer = 0 To colCount - 1
 				Dim headerCell = New XRTableCell()
-				headerCell.Width = colWidth
+				headerCell.WidthF = colWidth
 				headerCell.Text = ds.Tables(0).Columns(i).Caption
 
 				Dim bodyCell = New XRTableCell()
-				bodyCell.Width = colWidth
+				bodyCell.WidthF = colWidth
 				bodyCell.DataBindings.Add("Text", Nothing, ds.Tables(0).Columns(i).Caption)
 
 				If i = 0 Then
