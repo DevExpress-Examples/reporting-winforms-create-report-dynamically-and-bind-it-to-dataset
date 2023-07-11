@@ -96,14 +96,14 @@ namespace WindowsFormsApp1 {
         public void InitializeBandsUsingXRLabel(XtraReport report) {
             var ds = report.DataSource as DataSet;
             int colCount = ds.Tables[0].Columns.Count;
-            float colWidth = (report.PageWidth - (report.Margins.Left + report.Margins.Right)) / colCount;
+            int colWidth = (report.PageWidth - ((int)report.Margins.Left + (int)report.Margins.Right)) / colCount;
 
             // Create header captions.
             for (int i = 0; i < colCount; i++) {
                 var label = new XRLabel();
 
-                label.LocationF = new PointF(colWidth * i, 0);
-                label.SizeF = new SizeF(colWidth, 20);
+                label.Location = new Point(colWidth * i, 0);
+                label.Size = new Size(colWidth, 20);
                 label.Text = ds.Tables[0].Columns[i].Caption;
 
                 if (i > 0)
@@ -119,8 +119,8 @@ namespace WindowsFormsApp1 {
             for (int i = 0; i < colCount; i++) {
                 var label = new XRLabel();
 
-                label.LocationF = new PointF(colWidth * i, 0);
-                label.SizeF = new SizeF(colWidth, 20);
+                label.Location = new Point(colWidth * i, 0);
+                label.Size = new Size(colWidth, 20);
                 label.ExpressionBindings.Add(new ExpressionBinding("Text", "[" + ds.Tables[0].Columns[i].Caption + "]"));
                 label.OddStyleName = "OddStyle";
                 label.EvenStyleName = "EvenStyle";
@@ -138,15 +138,15 @@ namespace WindowsFormsApp1 {
         public void InitializeBandsUsingXRTable(XtraReport report) {
             var ds = (report.DataSource as DataSet);
             int colCount = ds.Tables[0].Columns.Count;
-            float colWidth = (report.PageWidth - (report.Margins.Left + report.Margins.Right)) / colCount;
+            int colWidth = (report.PageWidth - ((int)report.Margins.Left + (int)report.Margins.Right)) / colCount;
 
             // Create a table header.
             var tableHeader = new XRTable();
             tableHeader.Height = 20;
-            tableHeader.WidthF = (report.PageWidth - (report.Margins.Left + report.Margins.Right));
+            tableHeader.Width = (report.PageWidth - ((int)report.Margins.Left + (int)report.Margins.Right));
 
             var headerRow = new XRTableRow();
-            headerRow.WidthF = tableHeader.WidthF;
+            headerRow.Width = tableHeader.Width;
             tableHeader.Rows.Add(headerRow);
 
             tableHeader.BeginInit();
@@ -154,10 +154,10 @@ namespace WindowsFormsApp1 {
             // Create a table body.
             var tableBody = new XRTable();
             tableBody.Height = 20;
-            tableBody.WidthF = (report.PageWidth - (report.Margins.Left + report.Margins.Right));
+            tableBody.Width = (report.PageWidth - ((int)report.Margins.Left + (int)report.Margins.Right));
 
             var bodyRow = new XRTableRow();
-            bodyRow.WidthF = tableBody.WidthF;
+            bodyRow.Width = tableBody.Width;
             tableBody.Rows.Add(bodyRow);
             tableBody.EvenStyleName = "EvenStyle";
             tableBody.OddStyleName = "OddStyle";
@@ -167,11 +167,11 @@ namespace WindowsFormsApp1 {
             // Initialize table header and body cells.
             for (int i = 0; i < colCount; i++) {
                 var headerCell = new XRTableCell();
-                headerCell.WidthF = colWidth;
+                headerCell.Width = colWidth;
                 headerCell.Text = ds.Tables[0].Columns[i].Caption;
 
                 var bodyCell = new XRTableCell();
-                bodyCell.WidthF = colWidth;
+                bodyCell.Width = colWidth;
                 bodyCell.DataBindings.Add("Text", null, ds.Tables[0].Columns[i].Caption);
 
                 if (i == 0) {
