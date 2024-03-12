@@ -13,7 +13,7 @@ If you want to create a report based on [GridControl](https://docs.devexpress.co
 
 <!-- default file list -->
 
-## Files to Look At
+## Files to Review
 
 - [Form1.cs](./CS/Form1.cs) ([Form1.vb](./VB/Form1.vb))
 
