@@ -6,7 +6,7 @@
 <!-- default badges end -->
 # Reporting for WinForms - Create a Report Dynamically and Bind It to a DataSet
 
-This example demonstrates how to create a report dynamically and bind it to a [DataSet](https://docs.devexpress.com/XtraReports/400542). Based on a user's choice, either the [XRTable](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRTable) or [XRLabel](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRLabel) control is used to display report data, and the [XRChart](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRChart) control is used to visualize this data.
+This example creates a report dynamically and binds it to a [DataSet](https://docs.devexpress.com/XtraReports/400542). Based on a user's choice, either the [XRTable](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRTable) or [XRLabel](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRLabel) control is used to display report data, and the [XRChart](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRChart) control is used to visualize this data.
 
 ![Report Preview](Images/generate-report-dynamically.png)
 
@@ -42,3 +42,4 @@ If you want to create a report based on [GridControl](https://docs.devexpress.co
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
