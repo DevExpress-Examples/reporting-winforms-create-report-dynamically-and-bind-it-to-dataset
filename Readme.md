@@ -36,7 +36,7 @@ If you want to create a report based on [GridControl](https://docs.devexpress.co
 
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=reporting-winforms-create-report-dynamically-and-bind-it-to-dataset&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=reporting-winforms-create-report-dynamically-and-bind-it-to-dataset&~~~was_helpful=no)
 
